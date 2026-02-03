@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FE Units</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+
+        
+        <div class="selectWrapper">
+
+        <div class="motherPortrait">
+            <img class = "motherPortraitPNG" id="motherPortrait" src="full/Robin_FIcon.png">
+        </div>
+
+            <div id="Mother" class="motherSelector">
+                <select id="unitSelectMother" onchange="changeMother()">
+                    <option>--Select Mother--</option>
+                    <option>ROBIN F</option>
+                    <option>ANNA</option>
+                    <option>AVERSA</option>
+                    <option>CHERCHE</option>
+                    <option>CORDELIA</option>
+                    <option>EMMERYN</option>
+                    <option>FLAVIA</option>
+                    <option>LISSA</option>
+                    <option>MARIBELLE</option>
+                    <option>MIRIEL</option>
+                    <option>NOWI</option>
+                    <option>OLIVIA</option>
+                    <option>PANNE</option>
+                    <option>SAY’RI</option>
+                    <option>SULLY</option>
+                    <option>SUMIA</option>
+                    <option>THARJA</option>
+                    <option>TIKI</option>
+                    <option>KJELLE</option>
+                    <option>CYNTHIA</option>
+                    <option>SEVERA</option>
+                    <option>NOIRE</option>
+                    <option>NAH</option>
+                    <option>LUCINA</option>                   
+                </select>
+            </div>
+
+            <div id="Father" class="fatherSelector">
+                <select id="unitSelectFather" class="unitSelectFather" onchange="changeFather()">
+                    <option>--Select Father--</option>
+                    <option>ROBIN   M</option>
+                    <option>BASILIO</option>
+                    <option>CHROM</option>
+                    <option>DONNEL</option>
+                    <option>FREDRICK</option>
+                    <option>GAIUS</option>
+                    <option>GANGREL</option>
+                    <option>GREGOR</option>
+                    <option>HENRY</option>
+                    <option>KELLAM</option>
+                    <option>LIBRA</option>
+                    <option>LON’QU</option>
+                    <option>PRIAM</option>
+                    <option>RICKEN</option>
+                    <option>STAHL</option>
+                    <option>VAIKE</option>
+                    <option>VIRION</option>
+                    <option>WALHART</option>
+                    <option>YEN’FAY</option>
+                    <option>OWAIN</option>
+                    <option>INIGO</option>
+                    <option>BRADY</option>
+                    <option>GEROME</option>
+                    <option>YARNE</option>
+                    <option>LAURENT</option>                  
+                </select>
+            </div>
+            
+            <div class="placeholder3"></div>
+
+            <div class="robinWrapper">
+                <div class="boon">
+                    <select id="boon" onchange="robinStats()">
+                        <option>--BOON--</option>
+                        <option>HP</option>
+                        <option>STR</option>
+                        <option>MAG</option>
+                        <option>SKL</option>
+                        <option>SPD</option>
+                        <option>LCK</option>
+                        <option>DEF</option>
+                        <option>RES</option>
+                    </select>
+                </div>               
+            
+                <div class="bane" onchange="robinStats()">
+                    <select id="bane">
+                        <option>--BANE--</option>
+                        <option>HP</option>
+                        <option>STR</option>
+                        <option>MAG</option>
+                        <option>SKL</option>
+                        <option>SPD</option>
+                        <option>LCK</option>
+                        <option>DEF</option>
+                        <option>RES</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Spacing -->
+
+            <div class="placeholder1"></div>
+            
+
+            <!-- Robin Stat Row -->
+
+            <div id="STR_robin" class="stats" class="strRobin">
+                1o
+            </div>
+            <div id="MAG_robin" class="stats" class="magRobin">
+                2o
+            </div>
+            <div id="SKL_robin" class="stats" class="sklRobin">
+                3o
+            </div>
+            <div id="SPD_robin" class="stats" class="spdRobin">
+                4o
+            </div>
+            <div id="LCK_robin" class="stats" class="lckRobin">
+                5o
+            </div>
+            <div id="DEF_robin" class="stats" class="defRobin">
+                6o
+            </div>
+            <div id="RES_robin" class="stats" class="resRobin">
+                7o
+            </div>
+
+            <!-- Header Stat Row -->
+
+            <div class="stats" class="strHeader">
+                STR
+            </div>
+            <div class="stats" class="magHeader">
+                MAG
+            </div>
+            <div class="stats" class="sklHeader">
+                SKL
+            </div>
+            <div class="stats" class="spdHeader">
+                SPD
+            </div>
+            <div class="stats" class="lckHeader">
+                LCK
+            </div>
+            <div class="stats" class="defHeader">
+                DEF
+            </div>
+            <div class="stats" class="resHeader">
+                RES
+            </div>  
+            
+            <!-- Mother Stat Row -->
+
+            <div id="STR_mother" class="stats" class="strMother">
+                1m
+            </div>
+            <div id="MAG_mother" class="stats" class="magMother">
+                2m
+            </div>
+            <div id="SKL_mother" class="stats" class="sklMother">
+                3m
+            </div>
+            <div id="SPD_mother" class="stats" class="spdMother">
+                4m
+            </div>
+            <div id="LCK_mother" class="stats" class="lckMother">
+                5m
+            </div>
+            <div id="DEF_mother" class="stats" class="defMother">
+                6m
+            </div>
+            <div id="RES_mother" class="stats" class="resMother">
+                7m
+            </div>
+
+            <!-- Father Stat Row -->
+
+            <div id="STR_father" class="stats" class="strFather">
+                1f
+            </div>
+            <div id="MAG_father" class="stats" class="magFather">
+                2f
+            </div>
+            <div id="SKL_father" class="stats" class="sklFather">
+                3f
+            </div>
+            <div id="SPD_father" class="stats" class="spdFather">
+                4f
+            </div>
+            <div id="LCK_father" class="stats" class="lckFather">
+                5f
+            </div>
+            <div id="DEF_father" class="stats" class="defFather">
+                6f
+            </div>
+            <div id="RES_father" class="stats" class="resFather">
+                7f
+            </div>
+
+            <div class="placeholder2"></div>
+            
+            <!-- Child Display -->
+             <div class ="childDisplay">
+                <div id ="childMother" class="child1">
+                    
+                </div>
+                <div id ="childFather" class="child1">
+                    
+                </div>
+            </div>
+
+            <!-- Result Stat Row -->
+            
+            <div id="STR_result" class="stats" class="strResult">
+                1r
+            </div>
+            <div id="MAG_result" class="stats" class="magResult">
+                2r
+            </div>
+            <div id="SKL_result" class="stats" class="sklResult">
+                3r
+            </div>
+            <div id="SPD_result" class="stats" class="spdResult">
+                4r
+            </div>
+            <div id="LCK_result" class="stats" class="lckResult">
+                5r
+            </div>
+            <div id="DEF_result" class="stats" class="defResult">
+                6r
+            </div>
+            <div id="RES_result" class="stats" class="resResult">
+                7r
+            </div>
+
+            <div class="placeholder3"></div>
+
+            <div class="fatherPortrait" > 
+                <img  id="fatherPortrait" src="full/Robin_MIcon.png">
+            </div>
+
+        </div>
+
+        
+
+
+    </body>
+</html>
