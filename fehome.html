@@ -5,18 +5,63 @@
         <link rel="stylesheet" href="stylesheet.css">
         <script src="scripts.js"></script>
     </head>
-    <body>
+    <body onload="defaultSelections()">
 
-        
-        <div class="selectWrapper">
-
-        <div class="motherPortrait">
-            <img class = "motherPortraitPNG" id="motherPortrait" src="full/Robin_FIcon.png">
+        <div class="childList">
+            <div class="childPort">
+                <img class="childImage" src="icons/LucinaIcon.png" alt, id="Lucina" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/OwainIcon.png" alt, id="Owain" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/InigoIcon.png" alt, id="Inigo" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/BradyIcon.png" alt, id="Brady" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/KjelleIcon.png" alt, id="Kjelle" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/CynthiaIcon.png" alt, id="Cynthia" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/SeveraIcon.png" alt, id="Severa" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/GeromeIcon.png" alt, id="Gerome" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/MorganFIcon.png" alt, id="MorganF" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/MorganMIcon.png" alt, id="MorganM" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/YarneIcon.png" alt, id="Yarne" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/LaurentIcon.png" alt, id="Laurent" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/NoireIcon.png" alt, id="Noire" onClick="childImageClick(this.id)">
+            </div>
+            <div class="childPort">
+                <img class="childImage" src="icons/NahIcon.png" alt, id="Nah" onClick="childImageClick(this.id)">
+            </div>
         </div>
 
+
+        <div class="selectWrapper">
+
+            <div class="motherPortrait">
+                <img class = "motherPortraitPNG" id="motherPortrait" src="full/Robin_FIcon.png">
+            </div>
+
             <div id="Mother" class="motherSelector">
-                <select id="unitSelectMother" onchange="changeMother()">
-                    <option>--Select Mother--</option>
+                <select id="unitSelectMother" onchange="updateDisplay()">
+                    <option selected="true" disabled="disabled" class="selectOption">--Select Mother--</option>
                     <option>ROBIN F</option>
                     <option>ANNA</option>
                     <option>AVERSA</option>
@@ -30,7 +75,7 @@
                     <option>NOWI</option>
                     <option>OLIVIA</option>
                     <option>PANNE</option>
-                    <option>SAY’RI</option>
+                    <option>SAY'RI</option>
                     <option>SULLY</option>
                     <option>SUMIA</option>
                     <option>THARJA</option>
@@ -45,9 +90,9 @@
             </div>
 
             <div id="Father" class="fatherSelector">
-                <select id="unitSelectFather" class="unitSelectFather" onchange="changeFather()">
-                    <option>--Select Father--</option>
-                    <option>ROBIN   M</option>
+                <select id="unitSelectFather" class="unitSelectFather" onchange="updateDisplay()">
+                    <option selected="true" disabled="disabled" class="selectOption">--Select Father--</option>
+                    <option>ROBIN M</option>
                     <option>BASILIO</option>
                     <option>CHROM</option>
                     <option>DONNEL</option>
@@ -58,14 +103,14 @@
                     <option>HENRY</option>
                     <option>KELLAM</option>
                     <option>LIBRA</option>
-                    <option>LON’QU</option>
+                    <option>LON'QU</option>
                     <option>PRIAM</option>
                     <option>RICKEN</option>
                     <option>STAHL</option>
                     <option>VAIKE</option>
                     <option>VIRION</option>
                     <option>WALHART</option>
-                    <option>YEN’FAY</option>
+                    <option>YEN'FAY</option>
                     <option>OWAIN</option>
                     <option>INIGO</option>
                     <option>BRADY</option>
@@ -80,29 +125,29 @@
             <div class="robinWrapper">
                 <div class="boon">
                     <select id="boon" onchange="robinStats()">
-                        <option>--BOON--</option>
-                        <option>HP</option>
-                        <option>STR</option>
-                        <option>MAG</option>
-                        <option>SKL</option>
-                        <option>SPD</option>
-                        <option>LCK</option>
-                        <option>DEF</option>
-                        <option>RES</option>
+                        <option selected="true" disabled="disabled" class="selectOption">--BOON--</option>
+                        <option class="selectOption">HP</option>
+                        <option class="selectOption">STR</option>
+                        <option class="selectOption">MAG</option>
+                        <option class="selectOption">SKL</option>
+                        <option class="selectOption">SPD</option>
+                        <option class="selectOption">LCK</option>
+                        <option class="selectOption">DEF</option>
+                        <option class="selectOption">RES</option>
                     </select>
                 </div>               
             
                 <div class="bane" onchange="robinStats()">
                     <select id="bane">
-                        <option>--BANE--</option>
-                        <option>HP</option>
-                        <option>STR</option>
-                        <option>MAG</option>
-                        <option>SKL</option>
-                        <option>SPD</option>
-                        <option>LCK</option>
-                        <option>DEF</option>
-                        <option>RES</option>
+                        <option selected="true" disabled="disabled" class="selectOption">--BANE--</option>
+                        <option class="selectOption">HP</option>
+                        <option class="selectOption">STR</option>
+                        <option class="selectOption">MAG</option>
+                        <option class="selectOption">SKL</option>
+                        <option class="selectOption">SPD</option>
+                        <option class="selectOption">LCK</option>
+                        <option class="selectOption">DEF</option>
+                        <option class="selectOption">RES</option>
                     </select>
                 </div>
             </div>
@@ -252,8 +297,6 @@
 
         </div>
 
-        
-
-
     </body>
+
 </html>

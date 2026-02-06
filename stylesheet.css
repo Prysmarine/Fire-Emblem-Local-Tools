@@ -1,6 +1,14 @@
 
+body {
+    background-color: #29a329;
+}
+
 select {
     width: 10em;
+}
+
+img.darken {
+    filter: brightness(40%);
 }
 
 .stats
@@ -9,8 +17,39 @@ select {
     padding: 10px;
 }
 
+.childList {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;   
+
+}
+
+.childImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+option:disabled {
+    background-color: rgba(230, 92, 92, 0.8);
+    
+}
+
+.selectOption {
+    color: black;
+}
+
 .selectWrapper
 {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    background: rgb(153, 230, 153, .5);
+    padding-bottom: 5px;
     display: grid;
     width: 70%;
     margin: auto;
@@ -52,7 +91,21 @@ select {
     transform: scaleX(-1);
 }
 
-.fatherPortrait { grid-area: fatherPort; }
+.fatherPortrait 
+{ 
+    grid-area: fatherPort;
+}
+
+.childPort {
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px; 
+    aspect-ratio: 1;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    background: rgb(153, 230, 153, .5);
+}
 
 /* Robin Boon/Bane */
 
@@ -73,7 +126,9 @@ select {
 }
 
 /* Headers */
-.strHeader { grid-area: strHeader;}
+.strHeader { 
+    grid-area: strHeader;
+}
 
 .magHeader{ grid-area: magHeader;}
 
