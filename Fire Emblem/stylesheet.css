@@ -1,0 +1,208 @@
+
+body {
+    background-color: #29a329;
+}
+
+select {
+    width: 10em;
+}
+
+img.darken {
+    filter: brightness(40%);
+}
+
+.stats
+{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.childList {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;   
+
+}
+
+.childImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+option:disabled {
+    background-color: rgba(230, 92, 92, 0.8);
+    
+}
+
+.selectOption {
+    color: black;
+}
+
+.selectWrapper
+{
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 5px;
+    background: rgb(153, 230, 153, .5);
+    padding-bottom: 5px;
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+    "   holder3        holder3    holder3   holder3   holder3   holder3   holder3   holder3   holder3    holder3"
+    "motherPort       boonBane   strRobin  magRobin  sklRobin  spdRobin  lckRobin  defRobin  resRobin fatherPort"
+    "motherPort        holder1  strHeader magHeader sklHeader spdHeader lckHeader defHeader resHeader fatherPort"
+    "motherPort motherSelector  strMother magMother sklMother spdMother lckMother defMother resMother fatherPort"
+    "motherPort fatherSelector  strFather magFather sklFather spdFather lckFather defFather resFather fatherPort"
+    "   holder2      childDisp  strResult magResult sklResult spdResult lckResult defResult resResult    holder4";
+}
+
+
+
+/* Placeholder */
+.placeholder1 { grid-area: holder1;}
+.placeholder2 
+{ 
+    grid-area: holder2;
+    justify-content: right;
+    align-items: center;
+}
+.placeholder3 { grid-area: holder3;}
+.placeholder4 { grid-area: holder4;}
+
+.child1 
+{
+    grid-area: childDisp;
+    text-align: right;
+}
+
+/* portraits */
+
+.motherPortrait 
+{ 
+    grid-area: motherPort; 
+    transform: scaleX(-1);
+}
+
+.fatherPortrait 
+{ 
+    grid-area: fatherPort;
+}
+
+.childPort {
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px; 
+    aspect-ratio: 1;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    background: rgb(153, 230, 153, .5);
+}
+
+/* Robin Boon/Bane */
+
+.boon 
+{ 
+    display: grid;
+    grid-area: boon;
+    justify-content: right;
+    align-items: center;
+}
+
+.bane 
+{ 
+    display: grid;
+    grid-area: bane;
+    justify-content: right;
+    align-items: center;
+}
+
+/* Headers */
+.strHeader { 
+    grid-area: strHeader;
+}
+
+.magHeader{ grid-area: magHeader;}
+
+.sklHeader { grid-area: sklHeader;}
+
+.lckHeader { grid-area: lckHeader;}
+
+.spdHeader { grid-area: spdHeader;}
+
+.defHeader { grid-area: defHeader;}
+
+.resHeader { grid-area: resHeader;}
+
+/* Selectors */
+.motherSelector  
+{ 
+    display: grid;
+    grid-area: motherSelector;
+    justify-content: right;
+    align-items: center;
+}
+
+.fatherSelector 
+{ 
+    display: grid;
+    grid-area: fatherSelector;
+    justify-content: right;
+    align-items: center;
+}
+
+.robinWrapper { grid-area: boonBane;}
+
+/* Mother Stats */
+.strMother { grid-area: strMother;}
+
+.magMother { grid-area: magMother;}
+
+.sklMother { grid-area: sklMother;}
+
+.lckMother { grid-area: lckMother;}
+
+.spdMother { grid-area: spdMother;}
+
+.defMother { grid-area: defMother;}
+
+.resMother { grid-area: resMother;}
+
+/* Father Stats */
+.strFather { grid-area: strFather;}
+
+.magFather { grid-area: magFather;}
+
+.sklFather { grid-area: sklFather;}
+
+.lckFather { grid-area: lckFather;}
+
+.spdFather { grid-area: spdFather;}
+
+.defFather { grid-area: defFather;}
+
+.resFather { grid-area: resFather;}
+
+/* Result Stats */
+
+.strResult { grid-area: strResult;}
+
+.magResult { grid-area: magResult;}
+
+.sklResult { grid-area: sklResult;}
+
+.lckResult { grid-area: lckResult;}
+
+.spdResult { grid-area: spdResult;}
+
+.defResult { grid-area: defResult;}
+
+.resResult { grid-area: resResult;}
